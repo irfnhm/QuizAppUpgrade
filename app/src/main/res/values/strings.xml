@@ -1,0 +1,68 @@
+<resources>
+    <string name="app_name">QuizApp</string>
+
+    <!--Question 1-->
+    <string name="q1">What is the term used for describing the judgmental or commonsense part of problem solving?</string>
+    <string name="q1_a">Heuristic</string> <!--answer-->
+    <string name="q1_b">Critical</string>
+    <string name="q1_c">Value based</string>
+    <string name="q1_d">Analytical</string>
+
+    <!--Question 2-->
+    <string name="q2">What was originally called the "imitation game" by its creator?</string>
+    <string name="q2_a">The Turing Test</string><!--answer-->s
+    <string name="q2_b">LISP</string>
+    <string name="q2_c">The Logic Theorist</string>
+    <string name="q2_d">Cybernetics</string>
+
+    <!--Question 3-->
+    <string name="q3">Decision support programs are designed to help managers make:</string>
+    <string name="q3_a">Budget projections</string>
+    <string name="q3_b">Visual presentations</string>
+    <string name="q3_c">Business decisions</string> <!--answer-->
+    <string name="q3_d">Vacation schedules</string>
+
+    <!--Question 4-->
+    <string name="q4">To invoke the LISP system, you must enter</string>
+    <string name="q4_a">AI</string>
+    <string name="q4_b">LISP</string><!--answer-->
+    <string name="q4_c">Common LISP</string><!--answer-->
+    <string name="q4_d">ADA</string>
+
+    <!--Question 5-->
+    <string name="q5">Seymour Papert of the MIT AI lab created a programming environment for children called:</string>
+    <string name="q5_a">BASIC</string>
+    <string name="q5_b">LOGO</string><!--answer-->
+    <string name="q5_c">MYCIN</string>
+    <string name="q5_d">FORTRAN</string>
+
+    <!--Question 6-->
+    <string name="q6">In LISP, the addition 3 + 2 is entered as</string>
+    <string name="q6_a">3 + 2</string>
+    <string name="q6_b">3 add 2</string>
+    <string name="q6_c">3 + 2 =</string>
+    <string name="q6_d">(+ 3 2)</string><!--answer-->
+
+    <!--Question 7 image based-->
+    <string name="q7"></string>
+    <!--Question 8-->
+    <string name="q8">In LISP, the function assigns the symbol x to y is</string>
+    <string name="q8_a">(setq y x)</string>
+    <string name="q8_b">(set y = \'x')</string>
+    <string name="q8_c">(setq y = \'x')</string>
+    <string name="q8_d">(setq y \'x')</string><!--answer-->
+
+    <!--Question 9-->
+    <string name="q9">One of the leading American robotics centers is the Robotics Institute located at:</string>
+    <string name="q9_a">CMU</string><!--answer-->
+    <string name="q9_b">MIT</string>
+    <string name="q9_c">RAND</string>
+    <string name="q9_d">SRI</string>
+
+    <!--Question 10-->
+    <string name="q10">In a rule-based system, procedural domain knowledge is in the form of:</string>
+    <string name="q10_a">Production rules</string><!--answer-->
+    <string name="q10_b">Rule interpreters</string>
+    <string name="q10_c">Meta-rules</string>
+    <string name="q10_d">Control rules</string>
+</resources>
