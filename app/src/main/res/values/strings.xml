@@ -65,4 +65,7 @@
     <string name="q10_b">Rule interpreters</string>
     <string name="q10_c">Meta-rules</string>
     <string name="q10_d">Control rules</string>
+
+    <string name="submit_button">Submit</string>
+    <string name="reset_button">Reset</string>
 </resources>
