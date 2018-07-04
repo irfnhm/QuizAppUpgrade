@@ -44,7 +44,7 @@
     <string name="q6_d">(+ 3 2)</string><!--answer-->
 
     <!--Question 7 image based-->
-    <string name="q7"></string>
+    <string name="q7">This logo belongs to which Machine Learing Framework?</string>
     <!--Question 8-->
     <string name="q8">In LISP, the function assigns the symbol x to y is</string>
     <string name="q8_a">(setq y x)</string>
