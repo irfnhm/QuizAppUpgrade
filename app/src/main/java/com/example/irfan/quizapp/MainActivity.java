@@ -18,6 +18,7 @@ public class MainActivity extends AppCompatActivity {
     CheckBox cb1, cb2, cb3, cb4;
     EditText et;
     int finalScore = 0;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
         rg9 = (RadioGroup) findViewById(R.id.question_nine_rg);
         rg10 = (RadioGroup) findViewById(R.id.question_ten_rg);
 
-        rb1 = (RadioButton) findViewById(R.id.q_one_b);
+        rb1 = (RadioButton) findViewById(R.id.q_one_a);
         rb2 = (RadioButton) findViewById(R.id.q_two_a);
         rb3 = (RadioButton) findViewById(R.id.q_three_c);
         cb1 = (CheckBox) findViewById(R.id.q_four_b);
@@ -47,32 +48,44 @@ public class MainActivity extends AppCompatActivity {
         rb10 = (RadioButton) findViewById(R.id.q_ten_a);
     }
 
-    public void submitGame(View view){
-        if(rb1.isChecked()) finalScore += 1;
-        if(rb2.isChecked()) finalScore += 1;
-        if(rb3.isChecked()) finalScore += 1;
-        if(cb1.isChecked() && cb2.isChecked()) finalScore += 1;
-        if(rb5.isChecked()) finalScore += 1;
-        if(rb6.isChecked()) finalScore += 1;
+    public void submitGame(View view) {
+        if (rb1.isChecked()) finalScore += 1;
+        if (rb2.isChecked()) finalScore += 1;
+        if (rb3.isChecked()) finalScore += 1;
+        if (cb1.isChecked() && cb2.isChecked()) finalScore += 1;
+        if (rb5.isChecked()) finalScore += 1;
+        if (rb6.isChecked()) finalScore += 1;
         String answer = et.getText().toString();
-        if(answer.equals("tensor flow") || answer.equals("Tensor Flow") || answer.equals("TensorFlow")) finalScore += 1;
-        if(rb8.isChecked()) finalScore += 1;
-        if(rb9.isChecked()) finalScore += 1;
-        if(rb9.isChecked()) finalScore += 1;
+        if (answer.equals("tensor flow") || answer.equals("Tensor Flow") || answer.equals("TensorFlow"))
+            finalScore += 1;
+        if (rb8.isChecked()) finalScore += 1;
+        if (rb9.isChecked()) finalScore += 1;
+        if (rb10.isChecked()) finalScore += 1;
 
-        final Toast myToast = Toast.makeText(MainActivity.this, "Your score is: " + finalScore, Toast.LENGTH_SHORT);
-        myToast.show();
-
-        Handler handler = new Handler();
-        handler.postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                myToast.cancel();
-            }
-        }, 7000);
+        if (finalScore > 0) {
+            final Toast myToast = Toast.makeText(MainActivity.this, "Your score is: " + finalScore, Toast.LENGTH_SHORT);
+            myToast.show();
+            Handler handler = new Handler();
+            handler.postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    myToast.cancel();
+                }
+            }, 10000);
+        } else {
+            final Toast myToast = Toast.makeText(MainActivity.this, "Your score is 0. Please read the questions carefully and try again. Good luck!: ", Toast.LENGTH_SHORT);
+            myToast.show();
+            Handler handler = new Handler();
+            handler.postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    myToast.cancel();
+                }
+            }, 10000);
+        }
     }
 
-    private void reset(){
+    private void reset() {
         rg1.clearCheck();
         rg2.clearCheck();
         rg3.clearCheck();
@@ -88,8 +101,9 @@ public class MainActivity extends AppCompatActivity {
         rg10.clearCheck();
 
     }
+
     /*Reset game score and clear answers*/
-    public void resetGame(View view){
+    public void resetGame(View view) {
         finalScore = 0;
         reset();
     }

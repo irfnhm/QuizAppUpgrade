@@ -5,9 +5,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/wrapper_background"
-    tools:context=".MainActivity"
     android:clickable="true"
-    android:focusableInTouchMode="true">
+    android:focusableInTouchMode="true"
+    tools:context=".MainActivity">
 
 
     <!--Global Wrapper-->
@@ -575,24 +575,24 @@
 
             <!--Button Submit-->
             <Button
-                android:onClick="submitGame"
                 android:id="@+id/button_submit"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentLeft="true"
                 android:layout_marginLeft="@dimen/button_margin"
                 android:background="@color/button_background"
+                android:onClick="submitGame"
                 android:text="@string/submit_button" />
 
             <!--Button Reset-->
             <Button
-                android:onClick="resetGame"
                 android:id="@+id/button_reset"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentRight="true"
                 android:layout_marginRight="@dimen/button_margin"
                 android:background="@color/button_background"
+                android:onClick="resetGame"
                 android:text="@string/reset_button" />
 
         </RelativeLayout>

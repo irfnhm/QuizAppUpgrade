@@ -10,7 +10,8 @@
 
     <!--Question 2-->
     <string name="q2">What was originally called the "imitation game" by its creator?</string>
-    <string name="q2_a">The Turing Test</string><!--answer-->s
+    <string name="q2_a">The Turing Test</string><!--answer-->
+    s
     <string name="q2_b">LISP</string>
     <string name="q2_c">The Logic Theorist</string>
     <string name="q2_d">Cybernetics</string>
@@ -48,9 +49,9 @@
     <!--Question 8-->
     <string name="q8">In LISP, the function assigns the symbol x to y is</string>
     <string name="q8_a">(setq y x)</string>
-    <string name="q8_b">(set y = \'x')</string>
-    <string name="q8_c">(setq y = \'x')</string>
-    <string name="q8_d">(setq y \'x')</string><!--answer-->
+    <string name="q8_b">(set y = \'x\')</string>
+    <string name="q8_c">(setq y = \'x\')</string>
+    <string name="q8_d">(setq y \'x\')</string><!--answer-->
 
     <!--Question 9-->
     <string name="q9">One of the leading American robotics centers is the Robotics Institute located at:</string>
