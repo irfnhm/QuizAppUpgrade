@@ -13,8 +13,8 @@ import android.view.View;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
-    RadioGroup rg1, rg2, rg3, rg5, rg6, rg8, rg9, rg10;
-    RadioButton rb1_a, rb1_b, rb1_c, rb1_d,
+    private RadioGroup rg1, rg2, rg3, rg5, rg6, rg8, rg9, rg10;
+    private RadioButton rb1_a, rb1_b, rb1_c, rb1_d,
             rb2_a, rb2_b, rb2_c, rb2_d,
             rb3_a, rb3_b, rb3_c, rb3_d,
             rb5_a, rb5_b, rb5_c, rb5_d,
@@ -23,9 +23,9 @@ public class MainActivity extends AppCompatActivity {
             rb9_a, rb9_b, rb9_c, rb9_d,
             rb10_a, rb10_b, rb10_c, rb10_d;
 
-    CheckBox cb1, cb2, cb3, cb4;
-    EditText et;
-    int finalScore = 0;
+    private CheckBox cb1, cb2, cb3, cb4;
+    private EditText et;
+    private int finalScore = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -167,7 +167,7 @@ public class MainActivity extends AppCompatActivity {
             finalScore += 1;
         }
 
-        String answer = et.getText().toString();
+        String answer = et.getText().toString().trim();
         if (answer.equals("tensor flow") || answer.equals("Tensor Flow") || answer.equals("TensorFlow"))
             finalScore += 1;
 
@@ -202,7 +202,7 @@ public class MainActivity extends AppCompatActivity {
         }
 
         if (finalScore > 0) {
-            final Toast myToast = Toast.makeText(MainActivity.this, "Your score is: " + finalScore, Toast.LENGTH_SHORT);
+            final Toast myToast = Toast.makeText(MainActivity.this,getString(R.string.score_message) + finalScore, Toast.LENGTH_SHORT);
             myToast.show();
             Handler handler = new Handler();
             handler.postDelayed(new Runnable() {
@@ -212,7 +212,7 @@ public class MainActivity extends AppCompatActivity {
                 }
             }, 10000);
         } else {
-            final Toast myToast = Toast.makeText(MainActivity.this, "Your score is 0. Please read the questions carefully and try again. Good luck!: ", Toast.LENGTH_SHORT);
+            final Toast myToast = Toast.makeText(MainActivity.this, getString(R.string.zero_score_message), Toast.LENGTH_SHORT);
             myToast.show();
             Handler handler = new Handler();
             handler.postDelayed(new Runnable() {
